@@ -115,9 +115,9 @@ function featchData(i) {
                                                                     //aya.a = arabic[index];
                                                                     aya.fme = total_Meaning_en.chapter[index].text;
                                                                 });
-
-                                                                console.log(id3);
-                                                                saveData(arabic, 'Surah_' + id3 + "_" + surah_names_transliteration[id3] + '.json');
+                                                                
+                                                                //console.log(id3);
+                                                                saveData(arabic, padZero(id3) + '.js');
 
                                                             }
                                                         });
@@ -143,6 +143,9 @@ function featchData(i) {
         });
 }
 
+function padZero(number) {
+    return number.toString().padStart(3, '0');
+}
 
 function saveData(data, fileName) {
     //setTimeout(() => {
