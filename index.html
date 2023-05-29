@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript - read JSON from URL</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="mypanel"></div>
+    <button onclick="myLoop()">Get data</button>
+
+
+
+    <span id="list" hidden>
+        <span class="messagebody"><span lang="BN-BD">১। আল- ফাতিহা (সূচনা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২। আল-বাকারা (বকনা-বাছুর)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩। আল-ইমরান (ইমরানের পরিবার)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪। নিসা (নারী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫। আল-মায়িদাহ (খাদ্য পরিবেশিত টেবিল)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬। আল-আনাম (গৃহপালিত পশু)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭। আল-আরাফ (উচু স্থানসমূহ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮। আল-আনফাল (যুদ্ধে-লব্ধ ধনসম্পদ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯। আত-তাওবাহ (অনুশোচনা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০। ইউনুস (একজন নবী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১১। হুদ (একজন নবী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১২। ইউসুফ (একজন নবী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১৩। আর-রাদ (বজ্রনাদ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১৪। ইবরাহীম (একজন নবী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১৫। আল-হিজর (পাথুরে পাহাড়)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১৬। আন-নাহল (মৌমাছি)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১৭। বনি ইসরাইল (ইহুদী জাতি)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১৮। আল-কাহফ (গুহা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১৯। মারিয়াম (নবী ঈসা(আঃ) এর মা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২০। ত্বা হা (ত্বা হা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২১। আল-আম্বিয়া (নবীগণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২২। আল-হাজ্ব (হজ্ব)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২৩। আল-মুমিনুন (মুমিনগণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২৪। আন-নূর (আলো)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২৫। আল-ফুরকান (সত্য মিথ্যার পার্থক্য নির্ধারণকারী গ্রম্থ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২৬। আশ-শুআরা (কবিগণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২৭। আন-নমল (পিপীলিকা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২৮। আল-কাসাস (কাহিনী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">২৯। আল-আনকাবুত (মাকড়সা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩০। আল-রুম (রোমান জাতি)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩১। লুকমান (একজন জ্ঞানী ব্যাক্তি)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩২। আস-সাজদাহ (সিজদা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩৩। আল-আহযাব (জোট)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩৪। আস-সাবা (রানী সাবা/শেবা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩৫। আল-ফাতির (আদি স্রষ্টা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩৬। ইয়া সিন (ইয়াসিন)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩৭। আস-সাফফাত (সারিবদ্ধভাবে দাড়ানো)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩৮। সোয়াদ (আরবি বর্ণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৩৯। আয-যুমার (দল-বদ্ধ জনতা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪০। আল-মুমিন (বিশ্বাসী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪১। হামিম সাজদাহ (সুস্পষ্ট বিবরণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪২। আশ-শূরা (পরামর্শ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪৩। আয-যুখরুফ (সোনাদানা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪৪। আদ-দুখান (ধোয়া)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪৫। আল-জাসিয়াহ (নতজানু)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪৬। আল-আহকাফ (বালুর পাহাড়)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪৭। মুহাম্মদ (নবী মুহাম্মদ স:)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪৮। আল-ফাতহ (বিজয়)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৪৯। আল-হুজুরাত (বাসগৃহসমুহ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫০। ক্বাফ (আরবি বর্ণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫১। আয-যারিয়াত (বিক্ষেপকারী বাতাস)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫২। আত-তুর (একটি পাহাড়ের নাম)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫৩। আন-নাজম (তারা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫৪। আল-ক্বমর (চন্দ্র)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫৫। আর-রাহমান (পরম করুণাময়)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫৬। আল-ওয়াকিয়াহ (নিশ্চিত ঘটনা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫৭। আল-হাদিদ (লোহা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫৮। আল-মুজাদিলাহ (অনুযোগকারিণী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৫৯। আল-হাশর (সমাবেশ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬০। আল-মুমতাহানা (নারী যাকে পরিক্ষা করা হবে)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬১। আস-সাফ (সারবন্দী সৈন্যদল)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬২। আল-জুমুআহ (সম্মেলন/শুক্রবার)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬৩। আল-মুনাফিকুন (কপট বিশ্বাসীগণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬৪। আত-তাগাবুন (মোহ অপসারণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬৫। আত-ত্বালাক (তালাক)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬৬। আত-তাহরীম (নিষিদ্ধকরণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬৭। আল-মুলক (সার্বভৌম কতৃত্ব)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬৮। আল-ক্বলম (কলম)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৬৯। আল-হাক্ক্বাহ (নিশ্চিত সত্য)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭০। আল-মাআরিজ (উন্নয়নের সোপান)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭১। নূহ (একজন নবী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭২। আল-জ্বিন (জ্বিন সম্প্রদায়)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭৩। মুযাম্মিল (বস্ত্রাচ্ছাদনকারী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭৪। মুদাসসির (পোশাক পরিহিত)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭৫। আল-কিয়ামাহ (পুনরু্ত্তান)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭৬। আল-ইনসান (মানুষ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭৭। আল-মুরসালাত (প্রেরিত পুরুষগণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭৮। আন-নাবা (মহাসংবাদ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৭৯। আন-নাযিয়াত (প্রচেষ্টাকারী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮০। আবাসা (তিনি ভ্রুকুটি করলেন)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮১। আত-তাকবির (অন্ধকারাচ্ছন্ন)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮২। আল-ইনফিতার (বিদীর্ণ করা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮৩। আত-তাতফিক (প্রতারণা করা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮৪। আল-ইনশিকাক (খন্ড-বিখন্ড করণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮৫। আল-বুরুজ (নক্ষত্রপুন্জ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮৬।আত-তারিক (রাতের আগন্তুক)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮৭। আল-আলা (সর্বোন্নত)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮৮। আল-গাশিয়াহ (বিহ্বলকর ঘটনা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৮৯। আল-ফজর (ভোরবেলা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯০। আল-বালাদ (নগর)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯১। আশ-শামস (সূর্য)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯২। আল-লাইল (রাত্রি)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯৩। আদ-দুহা (পূর্বান্হের সুর্যকিরণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯৪। আল-ইনশিরাহ (প্রশস্তকরণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯৫। আত-তীন (ডুমুর)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯৬। আল-আলাক (রক্তপিন্ড)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯৭। আল-ক্বাদর (মহিমান্বিত)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯৮। আল-বাইয়িনাহ (সুস্পষ্ট প্রমাণ)</span></span>
+        <span class="messagebody"><span lang="BN-BD">৯৯। আল-যিলযাল (ভূমিকম্প)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০০। আল-আদিয়াত (অভিযানকারী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০১। আল-কারিয়াহ (মহাসংকট)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০২। আত-তাকাছুর (প্রাচুর্যের প্রতিযোগিতা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০৩। আল-আসর (সময়)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০৪। আল-হুমাযাহ (পরনিন্দাকারী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০৫। ফীল (হাতি)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০৬। আল-কুরাইশ (কুরাইশ গোত্র)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০৭। আল-মাউন (সাহায্য-সহায়তা)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০৮। আল-কাওসার (প্রাচুর্য)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১০৯। আল-কাফিরুন (অবিশ্বাসী গোষ্ঠী)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১১০। আন-নাসর (স্বর্গীয় সাহায্য)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১১১। লাহাব (জ্বলন্ত অংগার)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১১২। আল-ইখলাস (একত্ব)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১১৩। আল-ফালাক (নিশিভোর)</span></span>
+        <span class="messagebody"><span lang="BN-BD">১১৪। আন-নাস (মানবজাতি)</span></span></span>
+</body>
+
+</html>
